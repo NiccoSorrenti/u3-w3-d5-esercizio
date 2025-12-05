@@ -2,13 +2,14 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import './MyNavbar.css';
 
 const MyNavbar = function () {
   return (
     <>
       <Navbar expand="lg" style={{ backgroundColor: '#2E2E2E' }}>
         <Container fluid className="m-0 justify-content-between d-flex">
-          <div className="d-flex justify-content-center align-items-center">
+          <div className="d-flex justify-content-between align-items-center">
             <Navbar.Brand className="text-danger">Accedi</Navbar.Brand>
           </div>
           <Navbar.Brand
@@ -17,6 +18,7 @@ const MyNavbar = function () {
           >
             {' '}
             <img
+              id="logoAppleMusic"
               src="./src/assets/logos/music.svg"
               className="text-white"
               alt=""
