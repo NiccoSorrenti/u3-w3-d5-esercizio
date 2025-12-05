@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 const MyCarousel2 = function () {
   return (
     <>
-      <Container>
+      <Container bg="dark" data-bs-theme="dark">
         <Row>
           <h3 className="mt-3">Nuovi episodi radio</h3>
           <Col>

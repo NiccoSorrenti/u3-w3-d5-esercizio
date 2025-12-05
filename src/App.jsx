@@ -9,10 +9,12 @@ import { Container, Row, Col } from 'react-bootstrap';
 function App() {
   return (
     <>
-      <MyNavbar />
-      <MyCarousel />
-      <MyCarousel2 />
-      <MyNewExit />
+      <Container fluid className="bg-dark text-white">
+        <MyNavbar />
+        <MyCarousel />
+        <MyCarousel2 />
+        <MyNewExit />
+      </Container>
     </>
   );
 }

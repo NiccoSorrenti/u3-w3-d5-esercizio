@@ -18,7 +18,7 @@ const MyNewExit = function () {
       })
       .then((arrayOfAlbum) => {
         console.log('Album a DB', arrayOfAlbum);
-        setAlbum(arrayOfAlbum.Search);
+        setAlbum(arrayOfAlbum.data);
       })
       .catch((err) => {
         console.log('errore nella chiamata', err);
@@ -30,18 +30,17 @@ const MyNewExit = function () {
   }, []);
 
   return (
-    <>
-      <Container>
-        <Row>
-          <h3 className="mt-5">Nuove uscite</h3>
-          <Col>
-            {album.map((album) => {
-              return <SingleAlbum album={album} />;
-            })}
+    <Container>
+      <h3 className="mt-5">Nuove uscite</h3>
+
+      <Row>
+        {album.map((album) => (
+          <Col xs={12} sm={6} md={4} lg={3} xl={2} key={album.id}>
+            <SingleAlbum album={album} />
           </Col>
-        </Row>
-      </Container>
-    </>
+        ))}
+      </Row>
+    </Container>
   );
 };
 
